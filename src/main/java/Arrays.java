@@ -5,17 +5,15 @@ public class Arrays {
 
         int[] a = {3, 55, 23, 87, 66, 22, 1, 100, 99, 82, 94, 58, 37, 13, 23, 1, 1, 27, 55, 82, 3, 3, 3, 3, 3};
 
-        //Esercizio 1
         System.out.println("Eserzizio 1");
         int max=0;
         for (int i=0; i<a.length; i++){
-            if (a[i] > max){
-                max = a[i];
+            if (a[i]>max){
+                max=a[i];
             }
         }
         System.out.println(max);
 
-        //Esercizio 2
         System.out.println("Eserzizio 2");
         for (int i=0; i<a.length; i++){
             if (a[i] == max){
@@ -23,27 +21,21 @@ public class Arrays {
             }
         }
 
-        //Esercizio 3
         System.out.println("Eserzizio 3");
         System.out.println(contains(55, a));
 
-        //Esercizio 4
         System.out.println("Eserzizio 4");
         System.out.println(isCrescente(a));
 
-        //Esercizio 5
         System.out.println("Eserzizio 5");
         System.out.println(mostRecurrent(a));
 
-        //Esercizio 6
         System.out.println("Eserzizio 6");
         System.out.println(mediaMultipliDiTre(a));
 
-        //Esercizio 7
         System.out.println("Eserzizio 7");
         stampaZigZag(a);
 
-        //Esercizio 8
         System.out.println("Eserzizio 8");
         System.out.println(media(a));
 
@@ -104,23 +96,23 @@ public class Arrays {
 
     public static void stampaZigZag(int[] array) {
         int n = array.length;
-        for (int i = 0; i < n / 2; i++) {
-            System.out.print(array[i] + " ");
-            System.out.print(array[n - 1 - i] + " ");
+        for (int i = 0; i <(n/2); i++) {
+            System.out.print(array[i]+" ");
+            System.out.print(array[n-1-i]+" ");
         }
-        // Se l'array ha un numero dispari di elementi, stampiamo l'elemento centrale
+        // Se l'array ha un numero dispari di elementi, stampa l'elemento centrale
         if (n % 2 != 0) {
-            System.out.print(array[n / 2]);
+            System.out.print(array[n/2]);
         }
         System.out.println();
     }
 
     public static double media(int[] array) {
-        int sum = 0;
+        int sum=0;
         for (int num : array) {
-            sum += num;
+            sum+=num;
         }
-        return (double) sum / array.length;
+        return (double) sum/array.length;
     }
 
 
