@@ -85,3 +85,41 @@ public final class AnimalBuilder {
         return new Animal(name, pedigreeName, id, owner, race, residence, isVaccinated, isChampion, sons, sex, weight, height);
     }
 }
+
+class UsaAnimalBuilder{
+    public static void main (String[] a){
+
+        Animal pluto = AnimalBuilder.newBuilder("0000001")
+                .name("0000001")
+                .pedigreeName("PlutoSecondo")
+                .owner("Marco Rossi")
+                .race("labrador")
+                .residence("Via x")
+                .isVaccinated(true)
+                .isChampion(false)
+                .sons(null)
+                .sex(Animal.Sex.MALE)
+                .weight(40.5)
+                .height(30.0)
+                .build();
+
+        AnimalBuilder animalBuilder = AnimalBuilder.newBuilder("0000001")
+                .name("0000001")
+                .pedigreeName("PlutoSecondo")
+                .owner("Marco Rossi")
+                .race("labrador")
+                .residence("Via x")
+                .isVaccinated(true)
+                .isChampion(false)
+                .sons(null)
+                .sex(Animal.Sex.MALE)
+                .weight(40.5)
+                .height(30.0);
+
+        Animal animal3A = animalBuilder.build();
+        Animal animal3AClone = animalBuilder.build();
+        Animal animal3B = animalBuilder.sex(Animal.Sex.FEMALE).build();
+    }
+
+
+}

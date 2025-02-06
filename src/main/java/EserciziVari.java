@@ -1,4 +1,6 @@
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 
 public class EserciziVari {
 
@@ -14,6 +16,7 @@ public class EserciziVari {
         System.out.println(palindroma("dfafd"));
         cercaSommaTarget(new int[]{1,2,3,4,5,6,7,8,9}, 13);
         cercaMax(new int[]{1,2,3,4,5,6,7,8,9});
+        rearrange("vi6olino ragn5o se1i 4bel prop2rio un3");
     }
 
     public static int fattoriale(int n){
@@ -144,6 +147,29 @@ public class EserciziVari {
         return true;
     }
 
+
+    //scrivere un metodo che data una stringa in input (ad esempio "vi6olino ragn5o se1i 4bel prop2rio un3")
+    public static void rearrange(String stringa){
+
+        String[] a = stringa.split(" ");
+        String[] ordered = new String[a.length+1];
+
+        for (String s: a) {
+            char[] c = s.toCharArray();
+
+            for (char d: c) {
+                if(Character.isDigit(d)){
+                   // map.put(Character.getNumericValue(d), s);
+                    ordered[Character.getNumericValue(d)] = s;
+                }
+            }
+        }
+
+        for(int i=1; i<ordered.length; i++){
+            System.out.print(ordered[i] + " ");
+        }
+
+    }
 
 
 }
